@@ -35,6 +35,7 @@ docker push xxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/ml-api/digdag-server
 ```sh
 cat ~/.config/digdag/config
 ```
+
 > client.http.endpoint = http://ec2-aaa-bbb-ccc-ddd.compute-1.amazonaws.com:65432
 
 ## Connect to Digdag server
