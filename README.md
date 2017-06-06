@@ -28,6 +28,12 @@ docker tag ${YOUR_REPOS}/digdag-server:latest xxxxxxxxxx.dkr.ecr.us-east-1.amazo
 docker push xxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/ml-api/digdag-server
 ```
 
+## Run docker image on ECR
+
+You can run digdag-server instance on ECR GUI. 
+
+CLI command to appear.
+
 # Connect from DigDag client
 
 ## Configure client endpoint to the docker server
