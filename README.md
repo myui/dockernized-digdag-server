@@ -1,8 +1,19 @@
-# dockerfile-digdag-server
+# dockernized-digdag-server
 
 Dockerfile to run [digdag-server](https://github.com/treasure-data/digdag) on Amazon ECS.
 
 The dockerfile is based on one in [this repository](https://github.com/IntimateMerger/dockerfile-digdag-server).
+
+# Pull and Run Docker image in Dockerhub
+
+You can used [our prepared docker image](https://hub.docker.com/r/myui/digdag-server/tags/) in Dockerhub.
+
+```sh
+docker pull myui/digdag-server:latest
+docker run -p 65432:65432 myui/digdag-server
+```
+
+http://localhost:65432/
 
 # Pushing image to Amazon ECR
 
