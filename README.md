@@ -39,7 +39,7 @@ docker tag ${YOUR_REPOS}/digdag-server:latest xxxxxxxxxx.dkr.ecr.us-east-1.amazo
 docker push xxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/ml-api/digdag-server
 ```
 
-# Run docker image on ECR
+# Run docker image on ECS
 
 You can run digdag-server instance on ECR GUI. 
 
