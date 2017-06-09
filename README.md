@@ -17,13 +17,13 @@ http://localhost:65432/
 
 # Pushing image to Amazon ECR
 
-## login to ECS
+## 1. login to ECS
 
 ```sh
 eval $(aws ecr get-login --region us-east-1 --profile ${YOUR_PROFILE})
 ```
 
-## build a docker image
+## 2. build a docker image
 
 ```sh
 docker build -t ${YOUR_REPOS}/digdag-server -f Dockerfile .
@@ -31,7 +31,7 @@ docker build -t ${YOUR_REPOS}/digdag-server -f Dockerfile .
 
 `${YOUR_REPOS}/digdag-server` is ECR repository name
 
-## Push a docker image to ECR
+## 3. Push a docker image to ECR
 
 ```sh
 docker tag ${YOUR_REPOS}/digdag-server:latest xxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/${YOUR_REPOS}/digdag-server
@@ -39,7 +39,7 @@ docker tag ${YOUR_REPOS}/digdag-server:latest xxxxxxxxxx.dkr.ecr.us-east-1.amazo
 docker push xxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/ml-api/digdag-server
 ```
 
-## Run docker image on ECR
+# Run docker image on ECR
 
 You can run digdag-server instance on ECR GUI. 
 
@@ -47,7 +47,7 @@ CLI command to appear.
 
 # Connect from DigDag client
 
-## Configure client endpoint to the docker server
+## 1. Configure client endpoint to the docker server
 
 ```sh
 cat ~/.config/digdag/config
@@ -55,7 +55,7 @@ cat ~/.config/digdag/config
 
 > client.http.endpoint = http://ec2-aaa-bbb-ccc-ddd.compute-1.amazonaws.com:65432
 
-## Connect to Digdag server
+## 2. Connect to Digdag server
 
 ```sh
 digdag sessions
