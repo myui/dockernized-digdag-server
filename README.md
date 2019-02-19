@@ -20,7 +20,7 @@ http://localhost:65432/
 ## 1. login to ECS
 
 ```sh
-eval $(aws ecr get-login --region us-east-1 --profile ${YOUR_PROFILE})
+eval $(aws ecr get-login --region us-east-1 --profile ${YOUR_PROFILE} --no-include-email)
 ```
 
 ## 2. build a docker image
