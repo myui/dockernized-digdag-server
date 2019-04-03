@@ -1,6 +1,6 @@
 FROM java:8-alpine
 
-ENV DIGDAG_VERSION=0.9.28
+ENV DIGDAG_VERSION=0.9.35
 
 RUN apk add --no-cache curl && \
     curl -o /usr/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-$DIGDAG_VERSION" && \
